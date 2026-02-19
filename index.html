@@ -952,24 +952,24 @@ footer {
     <div class="sec-tag">Formulaire</div>
     <h2 class="sec-title">Dites-nous <span class="script">tout.</span></h2>
 
-    <form class="contact-form" onsubmit="handleSubmit(event)">
+    <form class="contact-form" action="https://formspree.io/f/VOTRE_ID" method="POST">
       <div class="f-row">
-        <input type="text" class="f-field" placeholder="Prénom *" required>
-        <input type="text" class="f-field" placeholder="Nom *" required>
+        <input type="text" name="firstName" placeholder="Prénom *" required>
+        <input type="text" name="lastName" placeholder="Nom *" required>
       </div>
       <div class="f-row">
-        <input type="email" class="f-field" placeholder="Email *" required>
-        <input type="tel" class="f-field" placeholder="Téléphone / WhatsApp">
+        <input type="email" name="Email" placeholder="Email *" required>
+        <input type="tel" name="phone" placeholder="Téléphone / WhatsApp">
       </div>
-      <input type="text" class="f-field" placeholder="Nom de l'entreprise" style="margin-bottom:1.5px; display:block; width:100%;">
-      <select class="f-field f-select" style="margin-bottom:1.5px; display:block; width:100%;">
+      <input type="text" name="Entreprise" placeholder="Nom de l'entreprise" style="margin-bottom:1.5px; display:block; width:100%;">
+      <select name="profilType" style="margin-bottom:1.5px; display:block; width:100%;">
         <option value="" disabled selected>Type de profil recherché</option>
         <option>Profil d'exécution — 350 000 Ar</option>
         <option>Profil intermédiaire — 500 000 Ar</option>
         <option>Profil cadre / dirigeant — 900 000 Ar</option>
         <option>Je ne sais pas encore</option>
       </select>
-      <textarea class="f-field f-textarea" placeholder="Décrivez le poste à pourvoir, le secteur, les compétences requises..."></textarea>
+      <textarea name="message" placeholder="Décrivez le poste à pourvoir, le secteur, les compétences requises..."></textarea>
       <button type="submit" class="f-submit" id="submitBtn">
         Envoyer ma demande &nbsp;→
       </button>
@@ -1007,17 +1007,6 @@ footer {
   }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = document.getElementById('submitBtn');
-    btn.textContent = 'Demande envoyée ✓';
-    btn.style.background = '#2d7a3a';
-    setTimeout(() => {
-      btn.textContent = 'Envoyer ma demande →';
-      btn.style.background = '';
-      e.target.reset();
-    }, 3000);
-  }
 </script>
 </body>
 </html>
