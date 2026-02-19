@@ -3,62 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talentys</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Talentys</title>
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="#hero">Home</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#process">Process</a></li>
             <li><a href="#tarifs">Tarifs</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <section id="hero">
         <h1>Welcome to Talentys</h1>
-        <p>Your trusted partner for success.</p>
+        <p>Your success is our mission.</p>
+    </section>
+    <section id="ticker">
+        <div class="ticker">
+            <p>Latest updates and news...</p>
+        </div>
+    </section>
+    <section id="stats">
+        <div class="stat">
+            <h2>100+</h2>
+            <p>Clients</p>
+        </div>
+        <div class="stat">
+            <h2>50+</h2>
+            <p>Projects completed</p>
+        </div>
     </section>
     <section id="services">
         <h2>Our Services</h2>
-        <p>We offer a range of services to help you achieve your goals.</p>
+        <ul>
+            <li>Consulting</li>
+            <li>Development</li>
+            <li>Design</li>
+        </ul>
     </section>
-    <section id="process">
+    <section id="processus">
         <h2>Our Process</h2>
-        <p>We follow a systematic approach to ensure the best results.</p>
+        <p>We follow a structured approach...</p>
     </section>
     <section id="tarifs">
-        <h2>Our Tarifs</h2>
-        <p>We offer competitive pricing for our quality services.</p>
+        <h2>Pricing</h2>
+        <p>Check out our competitive pricing plans.</p>
     </section>
     <section id="contact">
         <h2>Contact Us</h2>
         <form>
-            <div class="f-field">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" class="f-input">
-            </div>
-            <div class="f-field">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" class="f-input">
-            </div>
-            <div class="f-field">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" class="f-textarea"></textarea>
-            </div>
-            <div class="f-field">
-                <label for="subject">Subject:</label>
-                <select id="subject" name="subject" class="f-select">
-                    <option value="query">General Query</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="support">Support Request</option>
-                </select>
-            </div>
-            <div class="f-field">
-                <input type="submit" value="Send" class="f-submit">
-            </div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="form-control">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-control">
+            <button type="submit">Submit</button>
         </form>
     </section>
+    <footer>
+        <p>&copy; 2026 Talentys. All rights reserved.</p>
+    </footer>
 </body>
 </html>
